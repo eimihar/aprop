@@ -539,12 +539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rosengate/exedra.git",
-                "reference": "f8e45a0d83f502a9e669eb33dc43929a5e48f849"
+                "reference": "cb27fb14de1814c09037257d03250e049b29ad1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rosengate/exedra/zipball/f8e45a0d83f502a9e669eb33dc43929a5e48f849",
-                "reference": "f8e45a0d83f502a9e669eb33dc43929a5e48f849",
+                "url": "https://api.github.com/repos/Rosengate/exedra/zipball/cb27fb14de1814c09037257d03250e049b29ad1d",
+                "reference": "cb27fb14de1814c09037257d03250e049b29ad1d",
                 "shasum": ""
             },
             "type": "library",
@@ -575,7 +575,7 @@
                 "route",
                 "router"
             ],
-            "time": "2016-12-27 14:27:50"
+            "time": "2016-12-27 15:57:47"
         },
         {
             "name": "symfony/polyfill-mbstring",
