@@ -1,0 +1,7 @@
+{
+    "require": {
+        "rosengate/exedra": "dev-master",
+        "offworks/laraquent": "^1.0",
+        "cocur/slugify": "^2.3"
+    }
+}
