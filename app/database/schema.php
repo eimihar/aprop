@@ -42,6 +42,7 @@ $schema->table('user', function(Blueprint $table) {
     $table->increments('id');
     $table->string('full_name');
     $table->string('phone_no');
+    $table->string('sector', 10);
     $table->string('email');
     $table->decimal('net_salary');
     $table->decimal('basic_salary');
@@ -51,7 +52,7 @@ $schema->table('user', function(Blueprint $table) {
 
 $schema->table('user_project', function(Blueprint $table) {
     $table->increments('id');
-    $table->integer('inquiry_id');
+    $table->integer('user_id');
     $table->integer('project_id');
     $table->timestamps();
 });

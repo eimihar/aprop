@@ -7,18 +7,23 @@
                     <hr/>
                     <div>
                         <form method="post">
+                            <div class="form-group form-inline">
+                                <label>Sektor Pekerjaan</label><br>
+                                <label><?php echo $form->text('inquiry[sector]')->value('public')->attr('checked', true)->type('radio')->attr('class', 'form-control');?> Kerajaan</label>
+                                <label><?php echo $form->text('inquiry[sector]')->value('private')->type('radio')->attr('class', 'form-control');?> Swasta</label>
+                            </div>
                             <div class="form-group">
                                 <label>Nama penuh anda</label>
-                                <?php echo $form->text('inquiry[full_name]')->attr('class', 'form-control')->attr('placeholder', 'Nama penuh');?>
+                                <?php echo $form->text('inquiry[full_name]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'Nama penuh');?>
 <!--                                <input type="text" name="inquiry[full_name]" class="form-control" placeholder="Nama penuh" />-->
                             </div>
                             <div class="form-group">
                                 <label>No telefon</label>
-                                <?php echo $form->text('inquiry[phone_no]')->attr('class', 'form-control')->attr('placeholder', 'No Telefon');?>
+                                <?php echo $form->text('inquiry[phone_no]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'No Telefon');?>
                             </div>
                             <div class="form-group">
                                 <label>Emel</label>
-                                <?php echo $form->text('inquiry[email]')->attr('class', 'form-control')->attr('placeholder', 'Alamat emel. Contoh hello@example.com');?>
+                                <?php echo $form->text('inquiry[email]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'Alamat emel. Contoh hello@example.com');?>
                             </div>
                             <div class="form-group">
                                 <label>Gaji terkini</label>
@@ -26,13 +31,13 @@
                                     <div class="col-sm-6">
                                         <div class="input-group" style="padding-bottom: 5px;">
                                             <span class="input-group-addon">Gaji pokok</span>
-                                            <?php echo $form->text('inquiry[basic_salary]')->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
+                                            <?php echo $form->text('inquiry[basic_salary]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">Gaji bersih</span>
-                                            <?php echo $form->text('inquiry[net_salary]')->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
+                                            <?php echo $form->text('inquiry[net_salary]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
                                         </div>
                                     </div>
                                 </div>

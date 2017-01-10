@@ -40,7 +40,7 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <div style="text-align: center;">
+        <div style="text-align: center; padding-top: 10px;">
             <?php if($exe->user):?>
             <input type="button" onclick="window.location.href = '?apply=true';" class="btn btn-primary" value="Pohon Perumahan" />
             <?php else:?>
@@ -60,6 +60,11 @@
             </div>
             <div class="modal-body">
                 <form method="post">
+                    <div class="form-group form-inline">
+                        <label>Sektor Pekerjaan</label><br>
+                        <label><?php echo $form->text('inquiry[sector]')->value('public')->attr('checked', true)->type('radio')->attr('class', 'form-control');?> Kerajaan</label>
+                        <label><?php echo $form->text('inquiry[sector]')->value('private')->type('radio')->attr('class', 'form-control');?> Swasta</label>
+                    </div>
                     <div class="form-group">
                         <label>Nama penuh anda</label>
                         <input type="text" name="inquiry[full_name]" class="form-control" placeholder="Nama penuh" />

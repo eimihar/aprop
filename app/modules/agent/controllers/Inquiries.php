@@ -10,7 +10,7 @@ class Inquiries extends BaseController
         $users = User::all();
 
         return $this->render('inquiries/index', array(
-            'inquiries' => $users
+            'users' => $users
         ));
     }
 }

@@ -1,8 +1,11 @@
 <?php
 namespace App\Frontend\Controller;
 
+use App\Entity\Agent;
 use App\Entity\Project;
 use App\Entity\User;
+use App\Entity\UserProject;
+use App\Exe;
 
 class Web extends BaseController
 {
@@ -27,6 +30,8 @@ class Web extends BaseController
         ));
 
         return $this->render('web/index', array(
+            'title' => 'Casa Idaman',
+            'description' => 'Buat permohonan semakan rumah tanpa deposit',
             'projects' => $projects,
             'user' => $user
         ));
@@ -46,7 +51,10 @@ class Web extends BaseController
         $param = $this->exe->request->getParsedBody();
         $param = $param['inquiry'];
 
-        $user = User::findSimilar($param['email'], $param['phone_no']);
+        if($this->user)
+            $user = $this->user;
+        else
+            $user = User::findSimilar($param['email'], $param['phone_no']);
 
         if(!$user)
         {
@@ -54,6 +62,7 @@ class Web extends BaseController
             $user->created_at = date('Y-m-d H:i:s');
         }
 
+        $user->sector = $param['sector'];
         $user->full_name = $param['full_name'];
         $user->phone_no = $param['phone_no'];
         $user->email = $param['email'];
@@ -72,10 +81,18 @@ class Web extends BaseController
     {
         $query = Project::where('active', 1);
 
+        $userPreferenced = false;
+
+        $title = 'Senarai Projek Perumahan';
+        $description = 'Direktori projek-projek perumahan tanpa deposit';
+
         if($this->exe->request->param('user_preference') && $this->exe->user)
         {
             $userPreferenced = true;
             $projects = Project::findByUserPreferences($this->exe->user);
+
+            $title = 'Semakan Projek Perumahan';
+            $description = 'Hasil semakan berdasarkan maklumat anda';
         }
         else
         {
@@ -84,7 +101,10 @@ class Web extends BaseController
 
 
         return $this->render('web/projects', array(
-            'projects' => $projects
+            'title' => $title,
+            'description' => $description,
+            'projects' => $projects,
+            'userPreferenced' => $userPreferenced
         ));
     }
 
@@ -94,6 +114,16 @@ class Web extends BaseController
 
         /** @var Project $project */
         $project = Project::where('slug', $slug)->first();
+
+        if(Exe::httpRequest()->param('apply'))
+        {
+            $userProject = new UserProject;
+            $userProject->user_id = $this->user->id;
+            $userProject->project_id = $project->id;
+            $userProject->save();
+
+            return $this->exe->redirect->route('@web.project', array('project-slug' => $slug));
+        }
 
         return $this->render('web/project', array(
             'project' => $project,
@@ -108,8 +138,29 @@ class Web extends BaseController
 
     public function login()
     {
-        return $this->exe
-            ->redirect
-            ->admin('projects');
+        if($this->exe->session->has('agent_id'))
+            return $this->exe->redirect->admin('projects');
+
+        if(Exe::httpRequest()->isMethod('POST'))
+        {
+            $email = $this->exe->request->param('email');
+            $password = $this->exe->request->param('password');
+
+            $agent = Agent::where('email', $email)->first();
+
+            if(!$agent)
+                die('WRONG!');
+
+            if(!password_verify($password, $agent->password))
+                die('WRONG!');
+
+            $this->exe->session->set('agent_id', $agent->id);
+
+            return $this->exe
+                ->redirect
+                ->admin('projects');
+        }
+
+        return $this->render('web/login');
     }
 }

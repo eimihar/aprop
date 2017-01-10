@@ -1,6 +1,7 @@
 <?php
 namespace App\Middleware;
 
+use App\Entity\Agent;
 use App\Entity\User;
 use App\Exe;
 
@@ -8,6 +9,16 @@ class All
 {
     public function handle(Exe $exe)
     {
+        Exe::setInstance($exe);
+
+        $exe['service']->add('agent', function()
+        {
+            if(!$this->session->has('agent_id'))
+                return false;
+
+            return Agent::find($this->session->get('agent_id'));
+        });
+
         $exe['service']->add('user', function()
         {
             /** @var Exe $this */

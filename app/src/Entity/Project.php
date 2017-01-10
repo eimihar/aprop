@@ -24,6 +24,11 @@ class Project extends BaseEntity
         return $projects;
     }
 
+    public function getEllipsedDescription()
+    {
+        return substr($this->description, 0, 300);
+    }
+
     public function getMainImageUrl()
     {
         return '/apps/images/' . $this->main_image_path;

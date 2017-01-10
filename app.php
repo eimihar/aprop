@@ -38,6 +38,8 @@ $app->map->middleware(\App\Middleware\RestController::class);
 
 $app->map['admin']->any('/admin')->attr('module', 'Agent')->group(function(Router $admin)
 {
+    $admin->middleware(\App\Middleware\Admin::class);
+
     $admin['default']->any('/[:controller]/[:action?]')->execute(function(Exe $exe)
     {
         $exe->view->setDefaultData('form', $exe->form);
@@ -58,7 +60,7 @@ $app->map['web']->attr('module', 'Frontend')->group(function(Router $web)
 
     $web['project']->get('/p/[:project-slug]')->execute('controller=Web@project');
 
-    $web['default']->get('/[**:action]')->execute('controller=Web@{action}');
+    $web['default']->any('/[**:action]')->execute('controller=Web@{action}');
 });
 
 return $app;
