@@ -1,16 +1,16 @@
 <?php
 namespace App\Agent\Controller;
 
-use App\Entity\Inquiry;
+use App\Entity\User;
 
 class Inquiries extends BaseController
 {
     public function getIndex()
     {
-        $inquiries = Inquiry::all();
+        $users = User::all();
 
         return $this->render('inquiries/index', array(
-            'inquiries' => $inquiries
+            'inquiries' => $users
         ));
     }
 }

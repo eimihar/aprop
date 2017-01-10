@@ -9,13 +9,13 @@ $schema->table('agent', function(Blueprint $table) {
     $table->timestamps();
 });
 
-$schema->table('user', function(Blueprint $table) {
+/*$schema->table('user', function(Blueprint $table) {
     $table->increments('id');
     $table->string('full_name');
     $table->string('phone_no');
     $table->string('email');
     $table->timestamps();
-});
+});*/
 
 $schema->table('project', function(Blueprint $table) {
     $table->increments('id');
@@ -38,7 +38,7 @@ $schema->table('project_agent', function(Blueprint $table) {
     $table->timestamps();
 });
 
-$schema->table('inquiry', function(Blueprint $table) {
+$schema->table('user', function(Blueprint $table) {
     $table->increments('id');
     $table->string('full_name');
     $table->string('phone_no');
@@ -49,7 +49,7 @@ $schema->table('inquiry', function(Blueprint $table) {
     $table->timestamps();
 });
 
-$schema->table('inquiry_project', function(Blueprint $table) {
+$schema->table('user_project', function(Blueprint $table) {
     $table->increments('id');
     $table->integer('inquiry_id');
     $table->integer('project_id');

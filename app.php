@@ -11,12 +11,11 @@ $app->autoloadSrc();
 
 $app['factory']->set('runtime.exe', App\Exe::class);
 
-$app->config->set('db', array(
-    'host' => 'localhost',
-    'name' => 'properts',
-    'user' => 'root',
-    'pass' => ''
-));
+// env based db config
+if($app->path['app']->has('config/env.php'))
+    $app->config->set($app->path['app']->load('config/env.php'));
+else
+    throw new \Exception('Environment config is missing!!');
 
 $app->provider->add(\Laraquent\Support\Exedra\Provider::class);
 

@@ -7,6 +7,23 @@ class Project extends BaseEntity
 
     protected $table = 'project';
 
+    /**
+     * @param User $user
+     * @return mixed
+     */
+    public static function findByUserPreferences(User $user)
+    {
+        $netSalary = $user->net_salary;
+        $basicSalary = $user->basic_salary;
+
+        $projects = static::where('min_net_salary', '<=', $netSalary)
+            ->where('min_basic_salary', '<=', $basicSalary)
+            ->where('active', '=', 1)
+            ->get();
+
+        return $projects;
+    }
+
     public function getMainImageUrl()
     {
         return '/apps/images/' . $this->main_image_path;
