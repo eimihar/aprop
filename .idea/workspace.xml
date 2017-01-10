@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dee36aa2-99a8-4d47-87b8-c3ec5e4c65fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.php" afterPath="$PROJECT_DIR$/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/schema.php" afterPath="$PROJECT_DIR$/app/database/schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/controllers/Auth.php" afterPath="$PROJECT_DIR$/app/modules/agent/controllers/Auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/controllers/Inquiries.php" afterPath="$PROJECT_DIR$/app/modules/agent/controllers/Inquiries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" afterPath="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/controllers/BaseController.php" afterPath="$PROJECT_DIR$/app/modules/frontend/controllers/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/controllers/Web.php" afterPath="$PROJECT_DIR$/app/modules/frontend/controllers/Web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/contact.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/projects.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Exe.php" afterPath="$PROJECT_DIR$/app/src/Exe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Middleware/All.php" afterPath="$PROJECT_DIR$/app/src/Middleware/All.php" />
-    </list>
+    <list default="true" id="dee36aa2-99a8-4d47-87b8-c3ec5e4c65fc" name="Default" comment="" />
     <ignored path="arep.prop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -93,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auth.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/agent/controllers/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="env.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/env.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -560,12 +552,12 @@
       <workItem from="1482846963772" duration="21542000" />
       <workItem from="1482979849606" duration="607000" />
       <workItem from="1483331002387" duration="12841000" />
-      <workItem from="1484059828170" duration="13052000" />
+      <workItem from="1484059828170" duration="13224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97790000" />
+    <option name="totallyTimeSpent" value="97962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -578,7 +570,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.8125" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29924244" sideWeight="0.8125" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -801,14 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/env.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/agent/controllers/Inquiries.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1023,7 +1007,15 @@
     <entry file="file://$PROJECT_DIR$/app/modules/agent/controllers/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/env.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>
