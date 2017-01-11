@@ -10,10 +10,10 @@ class Exe extends RuntimeExe
 
     public function render($view, array $data = array())
     {
-        if($this['service']->has('layout'))
-        {
-            $this->view->setDefaultData('url', $this->url);
+        $this->view->setDefaultData('url', $this->url);
 
+        if($this['service']->has('layout') && !$this->request->isAjax())
+        {
             $template = $this->view->create($view);
 
             $template->set('title', 'Casa Idaman');

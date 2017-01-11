@@ -40,6 +40,15 @@ class Projects extends BaseController
         $project->updated_at = date('Y-m-d H:i:s');
         $project->save();
 
+        $this->handleUpload($project);
+
+        return $this->exe->redirect->admin('projects');
+    }
+
+    protected function handleUpload(Project $project)
+    {
+        $request = $this->exe->request;
+
         $files = $request->getUploadedFiles();
 
         $uploadBasePath = $this->exe->path['public']->path('apps/images');
@@ -71,8 +80,6 @@ class Projects extends BaseController
             if(!$project->main_image_path)
                 $project->setMainImage($projectImage)->save();
         }
-
-        return $this->exe->redirect->admin('projects');
     }
 
     public function getEdit()
@@ -93,5 +100,48 @@ class Projects extends BaseController
         return $this->render('projects/edit', array(
             'project' => $project
         ));
+    }
+
+    public function postEdit()
+    {
+        $params = $this->exe->request->getParams();
+
+        $id = $this->exe->request->param('id');
+
+        $project = Project::find($id);
+
+        $project->name = $params['name'];
+        $project->min_basic_salary = $params['min_basic_salary'];
+        $project->min_net_salary = $params['min_net_salary'];
+        $project->description = $params['description'];
+        $project->save();
+
+        $this->handleUpload($project);
+
+        return $this->exe->redirect->previous();
+    }
+
+    public function getDelete()
+    {
+        $id = $this->exe->request->param('id');
+
+        /** @var Project $project */
+        $project = Project::find($id);
+
+        $project->delete();
+
+        return $this->exe->redirect->admin('projects');
+    }
+
+    public function xpostDeleteImage()
+    {
+        $projectImageId = $this->exe->request->param('id');
+
+        /** @var ProjectImage $projectImage */
+        $projectImage = ProjectImage::find($projectImageId);
+
+        $projectImage->image->delete();
+
+        $projectImage->delete();
     }
 }

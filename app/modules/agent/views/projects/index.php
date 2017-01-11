@@ -21,7 +21,7 @@
                     <td><?php echo $project->min_basic_salary.' / '.$project->min_net_salary;?></td>
                     <td>
                         <a href="<?php echo $url->admin('projects', 'edit?id='.$project->id);?>" class="fa fa-pencil"></a>
-                        <a href="#" class="fa fa-trash"></a>
+                        <a href="<?php echo $url->admin('projects', 'delete?id='.$project->id);?>" class="fa fa-trash"></a>
                     </td>
                 </tr>
                 <?php endforeach;?>

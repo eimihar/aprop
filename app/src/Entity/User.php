@@ -24,4 +24,9 @@ class User extends BaseEntity
 
         return $query;
     }
+
+    public function relateProjects()
+    {
+        return $this->hasMany(UserProject::class, 'user_id', 'id');
+    }
 }

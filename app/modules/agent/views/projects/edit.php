@@ -1,8 +1,28 @@
 <h1>Edit Project</h1>
-<p>Edit project information</p>
+<p>Edit property project</p>
+<p></p>
+<script type="text/javascript">
+    var project = new function($)
+    {
+        this.addImage = function()
+        {
+            var container = $('.container-images');
+            var wrapper = $('.wrapper-image')[0];
+            container.append($(wrapper).clone());
+        };
+
+        this.deleteImage = function(id)
+        {
+            $.ajax({type: 'POST', url: '<?php echo $url->admin('projects', 'deleteImage');?>?id='+id}).done(function()
+            {
+                $('.project-image-'+id).remove();
+            });
+        };
+    }(jQuery);
+</script>
 <div class="row">
-    <div class="col-sm-6">
-        <form method="post">
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-sm-6">
             <div class="form-group">
                 <label>Project name</label>
                 <?php echo $form->text('name')->attr('required', true)->addClass('form-control');?>
@@ -21,8 +41,29 @@
                 <?php echo $form->textarea('description')->attr('required', true)->attr('style', 'height: 220px;')->addClass('form-control');?>
             </div>
             <div>
-                <input type="submit" class="btn btn-primary" value="Add" />
+                <input type="submit" class="btn btn-primary" value="Save" />
             </div>
-        </form>
-    </div>
+        </div>
+        <div class="col-sm-6">
+            <h3>Images</h3>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="container-project-images">
+                <?php foreach($project->images as $projectImage):?>
+                <div class="col-sm-6 project-image-<?php echo $projectImage->id;?>" style="position: relative;">
+                    <a href="javascript:;" onclick="project.deleteImage(<?php echo $projectImage->id;?>)" class="fa fa-trash" style="position: absolute; right:20px; top: 0px; color: darkred;"></a>
+                    <img style="width: 100%;" src="<?php echo $url->images($projectImage->path);?>" />
+                </div>
+                <?php endforeach;?>
+                </div>
+            </div>
+            <p>Add more image(s)</p>
+            <div class="container-images">
+                <div class="form-group wrapper-image">
+                    <?php echo $form->file('project_image[]')->attr('class', 'form-control');?>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-primary" onclick="project.addImage();"><span class="fa fa-plus"></span> Select more image</a>
+        </div>
+    </form>
+
 </div>

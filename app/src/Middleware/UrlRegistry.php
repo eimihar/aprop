@@ -25,7 +25,7 @@ class UrlRegistry
 
         $exe->url->addCallable('images', function($path = null)
         {
-            return '/apps/images' . $path ? '/' . $path : '';
+            return '/apps/images' . ($path ? '/' . $path : '');
         });
 
         $exe->url->addCallable('frontend', function($path = '')

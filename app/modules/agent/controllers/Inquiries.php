@@ -13,4 +13,13 @@ class Inquiries extends BaseController
             'users' => $users
         ));
     }
+
+    public function xgetDetail()
+    {
+        $user = User::find($this->exe->request->param('id'));
+
+        return $this->render('inquiries/detail', array(
+            'user' => $user
+        ));
+    }
 }

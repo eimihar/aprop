@@ -57,7 +57,7 @@
 
                 <div class="project-list-item-thumbnail">
                     <a href="<?php echo $link;?>">
-                        <img style="width: 100%; height: 100%;" src="<?php echo $exe->url->images('apps/images/'.$project->main_image_path);?>" />
+                        <img style="width: 100%; height: 100%;" src="<?php echo $exe->url->images($project->main_image_path);?>" />
                     </a>
                 </div>
                 <div class="project-list-item-details">
