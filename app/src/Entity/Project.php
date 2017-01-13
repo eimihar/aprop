@@ -19,6 +19,7 @@ class Project extends BaseEntity
         $projects = static::where('min_net_salary', '<=', $netSalary)
             ->where('min_basic_salary', '<=', $basicSalary)
             ->where('active', '=', 1)
+            ->where('sector', '=', $user->sector)
             ->get();
 
         return $projects;

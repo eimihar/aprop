@@ -28,6 +28,12 @@
                 <?php echo $form->text('name')->attr('required', true)->addClass('form-control');?>
             </div>
             <div class="form-group">
+                <label>Sector</label>
+                <div class="input-group">
+                    <?php echo $form->select('sector')->addClass('form-control')->options(array('public' => 'Public', 'private' => 'Private'));?>
+                </div>
+            </div>
+            <div class="form-group">
                 <label>Starting Price</label>
                 <div class="input-group">
                     <span class="input-group-addon">RM</span>

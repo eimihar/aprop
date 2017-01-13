@@ -73,7 +73,7 @@
                         <div style="float: left; width: 50px;">
                             <img style="height: 50px; width: 50px;" src="<?php echo $project->getMainImageUrl();?>" />
                         </div>
-                        <div style="float: left; padding-left: 10px;">
+                        <div style="float: left; padding-left: 10px; width: 80%;">
                             <div>
                                 <a href="<?php echo $url->route('@web.project', array('project-slug' => $project->slug));?>">
                                     <?php echo $project->getDisplayLabel();?>
