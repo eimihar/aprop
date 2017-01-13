@@ -43,7 +43,7 @@
             background: #003570;
             color: white;
             text-shadow: 3px 3px #24478e;
-            background-image: url('/images/banner.jpg?<?php echo time();?>');
+            background-image: url('/images/banner.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: 0px;

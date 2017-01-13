@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dee36aa2-99a8-4d47-87b8-c3ec5e4c65fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/schema.php" afterPath="$PROJECT_DIR$/app/database/schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/controllers/Projects.php" afterPath="$PROJECT_DIR$/app/modules/agent/controllers/Projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/views/projects/add.php" afterPath="$PROJECT_DIR$/app/modules/agent/views/projects/add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/views/projects/edit.php" afterPath="$PROJECT_DIR$/app/modules/agent/views/projects/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
     </list>
     <ignored path="arep.prop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,11 +63,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Entity/Project.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/projects.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -137,7 +151,6 @@
         <option value="$PROJECT_DIR$/app/src/Helper/Helper.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/web/projects.php" />
-        <option value="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/web/contact.php" />
         <option value="$PROJECT_DIR$/app.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" />
@@ -148,6 +161,7 @@
         <option value="$PROJECT_DIR$/app/database/schema.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/controllers/Projects.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/Project.php" />
+        <option value="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
       </list>
     </option>
   </component>
@@ -572,12 +586,12 @@
       <workItem from="1483331002387" duration="12841000" />
       <workItem from="1484059828170" duration="15158000" />
       <workItem from="1484159347799" duration="4772000" />
-      <workItem from="1484317027734" duration="13551000" />
+      <workItem from="1484317027734" duration="14575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118219000" />
+    <option name="totallyTimeSpent" value="119243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
@@ -763,6 +777,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#42#62#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,14 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -938,14 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1052,6 +1053,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
           <folding />
         </state>
       </provider>
