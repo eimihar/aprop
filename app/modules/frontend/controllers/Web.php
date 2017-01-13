@@ -131,6 +131,42 @@ class Web extends BaseController
             return $this->exe->redirect->route('@web.project', array('project-slug' => $slug));
         }
 
+        if($this->exe->request->isMethod('POST'))
+        {
+            $param = $this->exe->request->getParsedBody();
+            $param = $param['inquiry'];
+
+            if($this->user)
+                $user = $this->user;
+            else
+                $user = User::findSimilar($param['email'], $param['phone_no']);
+
+            if(!$user)
+            {
+                $user = new User;
+                $user->created_at = date('Y-m-d H:i:s');
+            }
+
+            $user->sector = $param['sector'];
+            $user->full_name = $param['full_name'];
+            $user->phone_no = $param['phone_no'];
+            $user->email = $param['email'];
+            $user->basic_salary = $param['basic_salary'];
+            $user->net_salary = $param['net_salary'];
+            $user->updated_at = date('Y-m-d H:i:s');
+            $user->ip_address = $_SERVER['REMOTE_ADDR'];
+            $user->save();
+
+            $userProject = new UserProject;
+            $userProject->user_id = $user->id;
+            $userProject->project_id = $project->id;
+            $userProject->save();
+
+            $this->exe->session->set('user_id', $user->id);
+
+            return $this->exe->redirect->refresh();
+        }
+
         return $this->render('web/project', array(
             'project' => $project,
             'projectImages' => $project->images

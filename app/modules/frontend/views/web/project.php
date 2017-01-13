@@ -1,5 +1,5 @@
 <?php $this->set('title', $project->getDisplayLabel());?>
-<?php //$this->set('description', 'RM ' . $project->start_price);?>
+<?php $this->set('description', 'Laman idaman anda.');?>
 <style type="text/css">
     .card
     {
@@ -7,6 +7,16 @@
         color: #4b4b4b;
     }
 </style>
+<script type="text/javascript">
+    function applyProperty()
+    {
+        <?php if($exe->user):?>
+        window.location.href = '?apply=true';
+        <?php else:?>
+        $('.modal-form-apply').modal();
+        <?php endif;?>
+    }
+</script>
 <?php if($exe->user && $exe->user->hasAppliedProject($project)):?>
     <?php $this->set('description', 'Anda telah memohon untuk projek perumahan ini. Kami akan menghubungi anda dalam masa terdekat.');?>
 <?php endif;?>
@@ -45,10 +55,10 @@
             <?php if($exe->user):?>
                 <?php if($exe->user->hasAppliedProject($project)):?>
                     <?php else:?>
-                        <input type="button" onclick="window.location.href = '?apply=true';" class="btn btn-primary" value="Pohon Perumahan" />
+                        <input type="button" style="font-size: 1.5em;" onclick="window.location.href = '?apply=true';" class="btn btn-primary" value="Pohon Perumahan" />
                     <?php endif;?>
             <?php else:?>
-            <input type="button" data-toggle="modal" data-target=".modal-form-apply" class="btn btn-primary" value="Pohon Perumahan" />
+            <input type="button" data-toggle="modal" style="font-size: 1.5em;" data-target=".modal-form-apply" class="btn btn-primary" value="Pohon Perumahan" />
             <?php endif;?>
         </div>
     </div>
@@ -71,15 +81,15 @@
                     </div>
                     <div class="form-group">
                         <label>Nama penuh anda</label>
-                        <input type="text" name="inquiry[full_name]" class="form-control" placeholder="Nama penuh" />
+                        <input type="text" name="inquiry[full_name]" required class="form-control" placeholder="Nama penuh" />
                     </div>
                     <div class="form-group">
                         <label>No telefon</label>
-                        <input type="text" class="form-control" name="inquiry[phone_no]" placeholder="No telefon" />
+                        <input type="text" class="form-control" required name="inquiry[phone_no]" placeholder="No telefon" />
                     </div>
                     <div class="form-group">
                         <label>Emel</label>
-                        <input type="email" class="form-control" name="inquiry[email]" placeholder="Alamat emel. Contoh hello@example.com" />
+                        <input type="email" class="form-control" required name="inquiry[email]" placeholder="Alamat emel. Contoh hello@example.com" />
                     </div>
                     <div class="form-group">
                         <label>Gaji terkini</label>
@@ -87,13 +97,13 @@
                             <div class="col-sm-6">
                                 <div class="input-group" style="padding-bottom: 5px;">
                                     <span class="input-group-addon">Gaji pokok</span>
-                                    <input type="text" class="form-control" name="inquiry[basic_salary]" placeholder="RM ..." />
+                                    <input type="text" class="form-control" required name="inquiry[basic_salary]" placeholder="RM ..." />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
                                     <span class="input-group-addon">Gaji bersih</span>
-                                    <input type="text" class="form-control" name="inquiry[net_salary]" placeholder="RM ..." />
+                                    <input type="text" class="form-control" required     name="inquiry[net_salary]" placeholder="RM ..." />
                                 </div>
                             </div>
                         </div>

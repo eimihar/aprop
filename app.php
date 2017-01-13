@@ -58,7 +58,7 @@ $app->map['web']->attr('module', 'Frontend')->group(function(Router $web)
 
     $web['contact']->get('/hubungi-kami')->execute('controller=Web@contact');
 
-    $web['project']->get('/p/[:project-slug]')->execute('controller=Web@project');
+    $web['project']->any('/p/[:project-slug]')->execute('controller=Web@project');
 
     $web['default']->any('/[**:action]')->execute('controller=Web@{action}');
 });
