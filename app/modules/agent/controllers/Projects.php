@@ -35,6 +35,8 @@ class Projects extends BaseController
         $project->description = $param['description'];
         $project->min_basic_salary = $param['min_basic_salary'];
         $project->min_net_salary = $param['min_net_salary'];
+        $project->start_price = $param['start_price'];
+        $project->state = $param['state'];
         $project->active = 1;
         $project->created_at = date('Y-m-d H:i:s');
         $project->updated_at = date('Y-m-d H:i:s');
@@ -92,6 +94,8 @@ class Projects extends BaseController
 
         $form->set(array(
             'name' => $project->name,
+            'state' => $project->state,
+            'start_price' => $project->start_price,
             'description' => $project->description,
             'min_basic_salary' => $project->min_basic_salary,
             'min_net_salary' => $project->min_net_salary
@@ -114,6 +118,8 @@ class Projects extends BaseController
         $project->min_basic_salary = $params['min_basic_salary'];
         $project->min_net_salary = $params['min_net_salary'];
         $project->description = $params['description'];
+        $project->start_price = $params['start_price'];
+        $project->state = $params['state'];
         $project->save();
 
         $this->handleUpload($project);

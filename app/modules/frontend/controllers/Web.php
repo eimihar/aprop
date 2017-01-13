@@ -16,6 +16,12 @@ class Web extends BaseController
         if($this->exe->request->getMethod() == 'POST')
             return $this->postIndex();
 
+        if($this->exe->request->param('cancel'))
+        {
+            $this->exe->session->destroy('user_id');
+            return $this->exe->redirect->frontend();
+        }
+
 //        if($this->exe->user)
 //            return $this->relatedIndex($this->exe->user);
 

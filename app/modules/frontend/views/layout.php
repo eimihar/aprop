@@ -18,6 +18,7 @@
             background: white;
             margin-bottom: 30px;
             padding-bottom: 50px;
+            box-shadow: 5px 5px 20px #dfdfdf;
         }
 
         * {
@@ -25,10 +26,9 @@
         }
 
         #top-nav .top-nav-menu a {
-            background: #5c5c5c;
             padding: 10px;
             font-size: 1.1em;
-            color: #dadada;
+            color: #014c8c;
         }
 
         #top-nav .top-nav-menu {
@@ -40,8 +40,13 @@
         }
 
         .content-header {
-            background: #5c5c5c;
-            color: #eeeeee;
+            background: #003570;
+            color: white;
+            text-shadow: 3px 3px #24478e;
+            background-image: url('/images/banner.jpg?<?php echo time();?>');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-radius: 0px;
         }
 
         @media screen and (max-width: 840px) {
@@ -57,8 +62,8 @@
             .top-nav-toggler a {
                 font-size: 1.1em;
                 padding: 10px;
-                background: #a2a2a2;
-                color: white;
+                /*background: #a2a2a2;*/
+                /*color: white;*/
             }
 
             .top-nav-menu {
@@ -69,6 +74,7 @@
                 display: block;
                 margin-bottom: 5px;
                 font-size: 30px !important;
+                border-bottom: 1px solid #ebebeb;
             }
         }
     </style>
@@ -84,11 +90,11 @@
 </head>
 <body>
 <div class="container" style="margin-top: 30px;">
-    <div id="top-nav" style="background: grey;">
+    <div id="top-nav">
         <div class="top-nav-toggler"><a onclick="ci.showMenu();" href="javascript:;"><span class="fa fa-list"></span> Menu</a></div>
         <div class="top-nav-menu">
             <a href="<?php echo $url->frontend();?>"><span class="fa fa-home"></span> Utama</a>
-            <a href="<?php echo $url->route('@web.projects');?>"><span class="fa fa-list-ol"></span> Senarai Project Perumahan</a>
+            <a href="<?php echo $url->route('@web.projects');?>"><span class="fa fa-list-ol"></span> Senarai Projek</a>
             <a href="<?php echo $url->route('@web.contact');?>"><span class="fa fa-phone"></span> Hubungi Kami</a>
         </div>
     </div>

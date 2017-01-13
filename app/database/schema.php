@@ -23,6 +23,8 @@ $schema->table('project', function(Blueprint $table) {
     $table->string('slug');
     $table->text('description');
     $table->string('image');
+    $table->string('state', 20);
+    $table->decimal('start_price');
     $table->decimal('min_net_salary');
     $table->decimal('min_basic_salary');
     $table->integer('created_agent');

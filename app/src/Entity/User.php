@@ -29,4 +29,9 @@ class User extends BaseEntity
     {
         return $this->hasMany(UserProject::class, 'user_id', 'id');
     }
+
+    public function hasAppliedProject(Project $project)
+    {
+        return UserProject::where('project_id', $project->id)->where('user_id', $this->id)->first() ? true : false;
+    }
 }

@@ -56,6 +56,13 @@ class Project extends BaseEntity
         return $this;
     }
 
+    public function getDisplayLabel()
+    {
+        $state = \App\Helper\Helper::getStates()[$this->state] ? : '';
+
+        return $this->name . ($state ? ', '.$state : '');
+    }
+
     public function relateImages()
     {
         return $this->hasMany(ProjectImage::class, 'project_id', 'id');

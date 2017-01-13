@@ -1,4 +1,5 @@
-<?php $this->set('title', $project->name);?>
+<?php $this->set('title', $project->getDisplayLabel());?>
+<?php //$this->set('description', 'RM ' . $project->start_price);?>
 <style type="text/css">
     .card
     {
@@ -6,25 +7,25 @@
         color: #4b4b4b;
     }
 </style>
-<div class="row">
-    <div class="col-sm-12">
-    </div>
-</div>
+<?php if($exe->user && $exe->user->hasAppliedProject($project)):?>
+    <?php $this->set('description', 'Anda telah memohon untuk projek perumahan ini. Kami akan menghubungi anda dalam masa terdekat.');?>
+<?php endif;?>
 <div class="row">
     <div class="col-sm-6">
         <div style="padding: 10px;color: #737373; ">
             <div class="row">
                 <div class="col-sm-6">
                     <div><strong>Gaji Pokok</strong></div>
-                    <div><?php echo $project->min_basic_salary;?></div>
+                    <div>RM <?php echo $project->min_basic_salary;?></div>
                 </div>
                 <div class="col-sm-6">
                     <div><strong>Gaji Bersih</strong></div>
-                    <div><?php echo $project->min_net_salary;?></div>
+                    <div>RM <?php echo $project->min_net_salary;?></div>
                 </div>
             </div>
         </div>
         <div style="color: #737373; margin-top: 20px; border-top: 1px solid #f2f2f2; padding-top: 10px; padding: 10px;">
+            <div><h3>RM <?php echo $project->start_price;?></h3></div>
             <?php echo nl2br($project->description);?>
         </div>
     </div>
@@ -42,7 +43,10 @@
     <div class="col-sm-12">
         <div style="text-align: center; padding-top: 10px;">
             <?php if($exe->user):?>
-            <input type="button" onclick="window.location.href = '?apply=true';" class="btn btn-primary" value="Pohon Perumahan" />
+                <?php if($exe->user->hasAppliedProject($project)):?>
+                    <?php else:?>
+                        <input type="button" onclick="window.location.href = '?apply=true';" class="btn btn-primary" value="Pohon Perumahan" />
+                    <?php endif;?>
             <?php else:?>
             <input type="button" data-toggle="modal" data-target=".modal-form-apply" class="btn btn-primary" value="Pohon Perumahan" />
             <?php endif;?>

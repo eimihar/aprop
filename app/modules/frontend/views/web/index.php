@@ -1,7 +1,7 @@
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-lg-8">
         <div class="row">
-            <div class="col-sm-10">
+            <div class="col-lg-10">
                 <div>
                     <h3>Borang Semakan Online</h3>
                     <hr/>
@@ -46,7 +46,11 @@
                                 <small class="form-text">Maklumat sulit seperti gaji dan no telefon hanya akan digunapakai untuk semakan, atau cara untuk hubungi tuan/puan</small>
                             </div>
                             <div class="form-group" style="text-align: center;">
-                                <input type="submit" value="Semak" class="btn btn-primary" />
+                                <?php $label = $exe->user ? 'Kemaskini Dan Semak' : 'Semak';?>
+                                <input type="submit" value="<?php echo $label;?>" class="btn btn-primary" />
+                                <?php if($exe->user):?>
+                                    <a href="?cancel=true" class="btn btn-default" onclick="return confirm('Batalkan semakan dan maklumat anda?');">Batal</a>
+                                <?php endif;?>
                             </div>
                         </form>
                     </div>
@@ -54,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-4" style="border-left: 1px solid #f0f0f0;">
+    <div class="col-lg-4" style="border-left: 1px solid #f0f0f0;">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4>Projek Terkini</h4>
@@ -65,14 +69,14 @@
                 /** @var \App\Entity\Project $project */
                 foreach($projects as $project):?>
                 <div class="row">
-                    <div class="col-sm-12" style="padding-bottom: 10px;">
+                    <div class="col-lg-12" style="padding-bottom: 10px;">
                         <div style="float: left; width: 50px;">
                             <img style="height: 50px; width: 50px;" src="<?php echo $project->getMainImageUrl();?>" />
                         </div>
                         <div style="float: left; padding-left: 10px;">
                             <div>
                                 <a href="<?php echo $url->route('@web.project', array('project-slug' => $project->slug));?>">
-                                    <?php echo $project->name;?>
+                                    <?php echo $project->getDisplayLabel();?>
                                 </a>
                             </div>
                             <div>

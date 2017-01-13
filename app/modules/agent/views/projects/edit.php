@@ -28,6 +28,19 @@
                 <?php echo $form->text('name')->attr('required', true)->addClass('form-control');?>
             </div>
             <div class="form-group">
+                <label>Starting Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">RM</span>
+                    <?php echo $form->text('start_price')->attr('required', true)->addClass('form-control');?>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>States</label>
+                <div class="input-group">
+                    <?php echo $form->select('state')->attr('class', 'form-control')->options(\App\Helper\Helper::getStates());?>
+                </div>
+            </div>
+            <div class="form-group">
                 <label>Minimum Salaries</label>
                 <div class="input-group">
                     <span class="input-group-addon">Basic</span>
