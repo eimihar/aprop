@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dee36aa2-99a8-4d47-87b8-c3ec5e4c65fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/views/projects/index.php" afterPath="$PROJECT_DIR$/app/modules/agent/views/projects/index.php" />
     </list>
     <ignored path="arep.prop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,11 +83,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/layout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/agent/views/projects/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -139,7 +149,6 @@
         <option value="$PROJECT_DIR$/app/src/Middleware/Admin.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/controllers/Auth.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/ProjectImage.php" />
-        <option value="$PROJECT_DIR$/app/modules/agent/views/projects/index.php" />
         <option value="$PROJECT_DIR$/app/src/Middleware/UrlRegistry.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/views/layout.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/controllers/Inquiries.php" />
@@ -162,6 +171,7 @@
         <option value="$PROJECT_DIR$/app/modules/agent/controllers/Projects.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/Project.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
+        <option value="$PROJECT_DIR$/app/modules/agent/views/projects/index.php" />
       </list>
     </option>
   </component>
@@ -586,12 +596,12 @@
       <workItem from="1483331002387" duration="12841000" />
       <workItem from="1484059828170" duration="15158000" />
       <workItem from="1484159347799" duration="4772000" />
-      <workItem from="1484317027734" duration="14575000" />
+      <workItem from="1484317027734" duration="14934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119243000" />
+    <option name="totallyTimeSpent" value="119602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
@@ -819,14 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/agent/views/projects/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1069,6 +1071,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/agent/views/projects/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
           <folding />
         </state>
       </provider>
