@@ -1,8 +1,9 @@
-<html>
+<html prefix="og: http://ogp.me/ns#">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="<?php echo $template->get('title');?>">
     <meta name="description" content="<?php echo $template->get('description');?>">
+    <meta property="og:image" content="http://www.casaidaman.com/apps/images/14942e0064a0a991.jpeg" >
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script src="/js/tether.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -13,7 +14,7 @@
         body {
             background: #fafafa;
         }
-        
+
         .container {
             background: white;
             margin-bottom: 30px;
@@ -106,8 +107,8 @@
         <div class="col-sm-12" id="container-content"><?php echo $template->render();?></div>
     </div>
 </div>
-    <div style="text-align: center; font-size: 0.9em; padding: 10px 0 10px 0; border-top: 1px solid #fafafa; color: #9f9f9f;">
-        Hakmilik terpelihara CasaIdaman <?php echo date('Y');?>
-    </div>
+<div style="text-align: center; font-size: 0.9em; padding: 10px 0 10px 0; border-top: 1px solid #fafafa; color: #9f9f9f;">
+    Hakmilik terpelihara CasaIdaman <?php echo date('Y');?>
+</div>
 </body>
 </html>
