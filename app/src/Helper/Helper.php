@@ -7,7 +7,7 @@ class Helper
     {
         return array(
             'kedah' => 'Kedah',
-            'kelantan' => 'Kedah',
+            'kelantan' => 'Kelantan',
             'melaka' => 'Melaka',
             'negeri_sembilan' => 'Negeri Sembilan',
             'pahang' => 'Pahang',

@@ -17,7 +17,7 @@
                     <?php $no++;?>
                 <tr>
                     <td><?php echo $no;?>.</td>
-                    <td><?php echo $user->full_name;?></td>
+                    <td><?php echo $user->full_name;?> [<?php echo $user->sector;?>]</td>
                     <td><?php echo $user->phone_no;?></td>
                     <td><?php echo $user->email;?></td>
                     <td><?php echo $user->basic_salary;?> / <?php echo $user->net_salary;?></td>

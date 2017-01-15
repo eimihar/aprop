@@ -9,8 +9,8 @@
                         <form method="post">
                             <div class="form-group form-inline">
                                 <label>Sektor Pekerjaan</label><br>
-                                <label><?php echo $form->text('inquiry[sector]')->value('public')->attr('checked', true)->type('radio')->attr('class', 'form-control');?> Kerajaan</label>
-                                <label><?php echo $form->text('inquiry[sector]')->value('private')->type('radio')->attr('class', 'form-control');?> Swasta</label>
+                                <label><?php echo $form->text('inquiry[sector]')->value('public')->attr('checked', $formIsPublic)->type('radio')->attr('class', 'form-control');?> Kerajaan</label>
+                                <label><?php echo $form->text('inquiry[sector]')->value('private')->attr('checked', $formIsPrivate)->type('radio')->attr('class', 'form-control');?> Swasta</label>
                             </div>
                             <div class="form-group">
                                 <label>Nama penuh anda</label>

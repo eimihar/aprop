@@ -68,4 +68,10 @@ class Project extends BaseEntity
     {
         return $this->hasMany(ProjectImage::class, 'project_id', 'id');
     }
+
+    public function delete()
+    {
+        $this->active = 2;
+        $this->save();
+    }
 }

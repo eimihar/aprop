@@ -35,7 +35,11 @@ class Web extends BaseController
             'inquiry[net_salary]' => $user->net_salary
         ));
 
+        $sector = $this->exe->user ? $this->exe->user->sector : 'public';
+
         return $this->render('web/index', array(
+            'formIsPublic' => $sector == 'public',
+            'formIsPrivate' => $sector == 'private',
             'title' => 'Casa Idaman',
             'description' => 'Buat permohonan semakan rumah tanpa deposit',
             'projects' => $projects,
