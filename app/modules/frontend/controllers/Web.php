@@ -11,7 +11,7 @@ class Web extends BaseController
 {
     public function index()
     {
-        $projects = Project::where('active', 1)->get();
+        $projects = Project::where('active', 1)->orderBy('created_at', 'desc')->take(10)->get();
 
         if($this->exe->request->getMethod() == 'POST')
             return $this->postIndex();
