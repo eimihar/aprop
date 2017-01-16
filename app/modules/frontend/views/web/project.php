@@ -97,13 +97,13 @@
                             <div class="col-sm-6">
                                 <div class="input-group" style="padding-bottom: 5px;">
                                     <span class="input-group-addon">Gaji pokok</span>
-                                    <input type="text" class="form-control" required name="inquiry[basic_salary]" placeholder="RM ..." />
+                                    <input type="text" class="form-control" name="inquiry[basic_salary]" placeholder="RM ..." />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
                                     <span class="input-group-addon">Gaji bersih</span>
-                                    <input type="text" class="form-control" required     name="inquiry[net_salary]" placeholder="RM ..." />
+                                    <input type="text" class="form-control" name="inquiry[net_salary]" placeholder="RM ..." />
                                 </div>
                             </div>
                         </div>

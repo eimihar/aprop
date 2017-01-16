@@ -31,13 +31,13 @@
                                     <div class="col-sm-6">
                                         <div class="input-group" style="padding-bottom: 5px;">
                                             <span class="input-group-addon">Gaji pokok</span>
-                                            <?php echo $form->text('inquiry[basic_salary]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
+                                            <?php echo $form->text('inquiry[basic_salary]')->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">Gaji bersih</span>
-                                            <?php echo $form->text('inquiry[net_salary]')->attr('required', true)->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
+                                            <?php echo $form->text('inquiry[net_salary]')->attr('class', 'form-control')->attr('placeholder', 'RM ...');?>
                                         </div>
                                     </div>
                                 </div>
