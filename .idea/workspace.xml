@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dee36aa2-99a8-4d47-87b8-c3ec5e4c65fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" afterPath="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" afterPath="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" />
     </list>
     <ignored path="arep.prop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="585">
               <caret line="39" column="89" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
               <folding>
                 <marker date="1484563820607" expanded="true" signature="888:1007" ph="..." />
@@ -39,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/project.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="99" column="76" selection-start-line="99" selection-start-column="76" selection-end-line="99" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -101,13 +110,13 @@
         <option value="$PROJECT_DIR$/app/modules/agent/views/projects/index.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/controllers/Projects.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/Project.php" />
-        <option value="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" />
         <option value="$PROJECT_DIR$/app/src/Helper/Helper.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/controllers/Web.php" />
         <option value="$PROJECT_DIR$/app/modules/agent/views/layout.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/layout.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/web/index.php" />
         <option value="$PROJECT_DIR$/app/modules/frontend/views/web/project.php" />
+        <option value="$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php" />
       </list>
     </option>
   </component>
@@ -154,6 +163,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -476,8 +487,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,12 +574,13 @@
       <workItem from="1484317027734" duration="15713000" />
       <workItem from="1484463123809" duration="2841000" />
       <workItem from="1484477084625" duration="863000" />
-      <workItem from="1484563776550" duration="44000" />
+      <workItem from="1484563776550" duration="452000" />
+      <workItem from="1484622573853" duration="538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124129000" />
+    <option name="totallyTimeSpent" value="125075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
@@ -650,9 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#29#47#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -674,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23383" selection-start-line="0" selection-start-column="23383" selection-end-line="0" selection-end-column="23383" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
           <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,19 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Helper/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/frontend/views/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="585">
           <caret line="39" column="89" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
           <folding>
             <marker date="1484563820607" expanded="true" signature="888:1007" ph="..." />
@@ -996,6 +992,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="99" column="76" selection-start-line="99" selection-start-column="76" selection-end-line="99" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/agent/views/inquiries/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding />
         </state>
       </provider>

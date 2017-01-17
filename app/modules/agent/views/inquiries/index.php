@@ -8,7 +8,7 @@
                     <th>Name</th>
                     <th>Phone No.</th>
                     <th>Email</th>
-                    <th>Salary (RM)</th>
+                    <th>Salary (RM)<br>Basic / Net</th>
                     <th>Time</th>
                     <th></th>
                 </tr>
